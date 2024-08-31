@@ -10,128 +10,119 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            /* background-color: #f8f9fa;  */
-            /* color: #343a40; */
             background-image: url('./hand-1248053.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            /* background: #00091B;*/
-            color: #fff; 
-
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         .coming-soon {
             text-align: center;
-            padding: 100px 0;
+            padding: 20px;
         }
         .countdown {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
+            font-size: 2rem;
+            margin-bottom: 20px;
         }
 
         @keyframes fadeIn {
-        from {top: 20%; opacity: 0;}
-        to {top: 100; opacity: 1;}
-        
-        }
-
-        @-webkit-keyframes fadeIn {
-        from {top: 20%; opacity: 0;}
-        to {top: 100; opacity: 1;}
-        
+            from {top: 20%; opacity: 0;}
+            to {top: 50%; opacity: 1;}
         }
 
         .wrapper {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        animation: fadeIn 1000ms ease;
-        -webkit-animation: fadeIn 1000ms ease;
-        
+            text-align: center;
+            animation: fadeIn 1000ms ease;
+            margin-bottom: 20px;
         }
 
         h1 {
-        font-size: 50px;
-        font-family: 'Poppins', sans-serif;
-        margin-bottom: 0;
-        line-height: 1;
-        font-weight: 700;
+            font-size: 2rem;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 10px;
+            line-height: 1.2;
+            font-weight: 700;
         }
 
         .dot {
-        color: #4FEBFE;
+            color: #4FEBFE;
         }
 
         p {
-        text-align: center;
-        margin: 18px;
-        font-family: 'Muli', sans-serif;
-        font-weight: normal;
-        
+            font-family: 'Muli', sans-serif;
+            font-weight: normal;
+            margin: 10px 0;
+            font-size: 1rem;
         }
 
         .icons {
-        text-align: center;
-        
+            text-align: center;
         }
 
-        .icons i {
-        color: #00091B;
-        background: #fff;
-        height: 15px;
-        width: 15px;
-        padding: 13px;
-        margin: 0 10px;
-        border-radius: 50px;
-        border: 2px solid #fff;
-        transition: all 200ms ease;
-        text-decoration: none;
-        position: relative;
+        .icons img {
+            width: 40px;
+            height: 40px;
+            margin: 0 5px;
+            transition: transform 200ms ease;
         }
 
-        .icons i:hover, .icons i:active {
-        color: #fff;
-        background: none;
-        cursor: pointer !important;
-        transform: scale(1.2);
-        -webkit-transform: scale(1.2);
-        text-decoration: none;
-        
+        .icons img:hover {
+            transform: scale(1.2);
+            cursor: pointer;
         }
-        .icon {
+
+        .footer {
+            text-align: center;
+            margin-top: auto;
+            padding: 10px 20px;
+        }
+
+        .footer p {
+            margin: 5px 0;
+            font-size: 0.875rem;
+        }
+
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+            .countdown {
+                font-size: 2.5rem;
+            }
+            .icons img {
                 width: 50px;
                 height: 50px;
+            }
         }
-        .icon-new {
-                width: 60px;
-                height: 60px;      
-        }
-
-</style>
+    </style>
 </head>
 <body>
 
-    <div class="coming-soon container mb-2">
+    <div class="coming-soon">
         <h1 class="display-4">IT Secure Audit & Compliance</h1>
         <p class="lead">We are currently working hard on something awesome. Stay tuned!</p>
-
         <div id="countdown" class="countdown"></div>
     </div>
 
-    <div class="wrapper mt-4">
-    <h1>coming soon<span class="dot" style="color: #fff;">...</span></h1>
-    <p style="color: #fff;">Find us on</p>
-    <div class="icons">
-        <a href="#"><img src="./twitter-alt-circle_12107562.svg" alt="Icon" class="icon"></a>
-        <a href="#"><img src="./instagram_2111463.png" alt="Icon" class="icon"></a>
-        <a href="#"><img src="./icons8-facebook-96.png" alt="Icon" class="icon-new"></a>
-        <a href="#"><img src="./icons8-whatsapp-128.png" alt="Icon" class="icon-new"></a>
-    </div>
+    <div class="wrapper">
+        <h1>coming soon<span class="dot">...</span></h1>
+        <p>Find us on</p>
+        <div class="icons">
+            <a href="#"><img src="./twitter-alt-circle_12107562.svg" alt="Twitter Icon"></a>
+            <a href="#"><img src="./instagram_2111463.png" alt="Instagram Icon"></a>
+            <a href="#"><img src="./icons8-facebook-96.png" alt="Facebook Icon"></a>
+            <a href="#"><img src="./icons8-whatsapp-128.png" alt="WhatsApp Icon"></a>
+        </div>
     </div>
 
-    <div class="coming-soon container">
+    <div class="footer">
         <p>Our new website is under construction. We’ll be here soon with our new presence.</p>
         <p>For inquiries, please contact us at <a href="mailto:info@itsecaudit.com">info@isac.it.com</a></p>
         <p><small>&copy; 2024 IT Secure Audit & Compliance. All Rights Reserved.</small></p>
